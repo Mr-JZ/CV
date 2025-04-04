@@ -25,20 +25,21 @@
             buildPhase = ''
               # Copy common file first
               cp ${src}/cv_common.tex .
-              
+
               # Build English version
-              cp ${src}/Zisenis_CV.tex .
-              pdflatex Zisenis_CV.tex
-              pdflatex Zisenis_CV.tex
-              
+              cp ${src}/${documentName}.tex .
+              pdflatex ${documentName}.tex
+              pdflatex ${documentName}.tex
+
               # Build German version
-              cp ${src}/Zisenis_CV_de.tex .
-              pdflatex Zisenis_CV_de.tex
-              pdflatex Zisenis_CV_de.tex
+              cp ${src}/${documentName}_de.tex .
+              pdflatex ${documentName}_de.tex
+              pdflatex ${documentName}_de.tex
             '';
             installPhase = ''
               mkdir -p $out
               cp ${documentName}.pdf $out/
+              cp ${documentName}_de.pdf $out/
             '';
           };
         };
