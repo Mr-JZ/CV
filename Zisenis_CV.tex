@@ -6,32 +6,8 @@
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
-
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
 \usepackage[english]{babel}
-\usepackage{tabularx}
-\input{glyphtounicode}
-
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
+\input{cv_common}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -112,12 +88,12 @@
 % \end{tabular*}
 
 \begin{center}
-    \textbf{\Huge \scshape Jan Henrik Zisenis} \\ \vspace{1pt}
+    \textbf{\Huge \scshape \cvname} \\ \vspace{1pt}
     \small Full-Stack Developer | Skilled in Next.js, Postgres, Python, and Mobile Development (Flutter) \\ \vspace{1pt}
-    \small \href{mailto:jan@zisenis.digital}{\underline{jan@zisenis.digital}} $|$ 
-    \href{tel:+4915566401005}{(+49) 15566401005} $|$ 
-    Germany, Celle $|$
-    \href{https://mr-jz.de}{\underline{mr-jz.de}}
+    \small \href{mailto:\cvemail}{\underline{\cvemail}} $|$ 
+    \href{tel:\cvphone}{\cvphone} $|$ 
+    \cvlocation $|$
+    \href{https://\cvwebsite}{\underline{\cvwebsite}}
 \end{center}
 
 
@@ -193,8 +169,8 @@
 \section{Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Programming Languages \& Tools}{: Python, JavaScript (Next.js, Node.js), Postgres, Flutter, C++, Terraform} \\
-     \textbf{Development Practices}{: Authentication (OAuth, Magic Link), Infrastructure as Code, Embedded Systems} \\
+     \textbf{Programming Languages \& Tools}{: \cvtechskills} \\
+     \textbf{Development Practices}{: \cvdevpractices} \\
      \textbf{Soft Skills}{: Team collaboration, presentation delivery, and problem-solving}
     }}
  \end{itemize}

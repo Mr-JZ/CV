@@ -1,0 +1,112 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage[german]{babel}
+\input{cv_common}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape \cvname} \\ \vspace{1pt}
+    \small Full-Stack Entwickler | Spezialisiert auf Next.js, Postgres, Python und Mobile Entwicklung (Flutter) \\ \vspace{1pt}
+    \small \href{mailto:\cvemail}{\underline{\cvemail}} $|$ 
+    \href{tel:\cvphone}{\cvphone} $|$ 
+    \cvlocation $|$
+    \href{https://\cvwebsite}{\underline{\cvwebsite}}
+\end{center}
+
+%-----------BERUFSERFAHRUNG-----------
+\section{Berufserfahrung}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Persönliche Weiterentwicklung (Karrierepause)}{Sep 2024 -- Heute}
+      {Full-Stack Entwickler (Freiberufliche Projekte)}{Remote}
+      \resumeItemListStart
+        \resumeItem{Erstellung von Wireframes und Durchführung von 15 Usability-Tests zur Verbesserung der UX und Reduzierung von Designfehlern}
+        \resumeItem{Aufbau der Infrastruktur mit Terraform für skalierbare, dekonstruierbare Deployments; Auswahl von Hetzner als Provider}
+        \resumeItem{Entwicklung von zwei Next.js-Projekten mit Full-Stack-Entwicklung inklusive Postgres-Backend und OAuth/Magic Link Authentifizierung}
+        \resumeItem{Backend-spezifische Arbeit: Optimierung des Datenbankschemas, Verbesserung der Abfrageeffizienz um 20\%}
+        \resumeItem{Präsentation zur Förderung der Nutzung von Nix zur Optimierung von Entwicklungsumgebungen, Verbesserung der Einarbeitungszeit}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Netrocks}{Feb 2024 -- Aug 2024}
+      {Softwareentwickler}{Remote}
+      \resumeItemListStart
+        \resumeItem{Absolvierung eines 10-wöchigen Praktikums zur Entwicklung einer White-Label Frontend-Lösung mit Flutter und Backend-API-Integration}
+        \resumeItem{Verfassung der Bachelorarbeit: Konzeption und Implementierung eines wiederverwendbaren Frameworks für mobile Anwendungen, Verbesserung der Entwicklungsgeschwindigkeit um 70 Stunden/Projekt}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {E3DC HagerEnergy Group}{Jan 2022 -- Dez 2022}
+      {Softwareentwickler}{Remote}
+      \resumeItemListStart
+        \resumeItem{Automatisierung von SVN-Datei- und Ordnerübertragungen durch Entwicklung eines Python-Skripts, Reduzierung von Fehlern und manuellen Eingriffen um 70\%}
+        \resumeItem{Entwicklung eines Testpakets für ein eingebettetes System, Sicherstellung 100\%iger Übereinstimmung mit Hardware-IO-Spezifikationen}
+        \resumeItem{Debugging und Optimierung von Echtgeräte-IO-Operationen zur Verbesserung der Entwicklereffizienz}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJEKTE-----------
+\section{Projekte}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Modulare Self-Service App für Kaffeemaschinen} $|$ \emph{Flutter, Dart, MVC, Provider}}{Feb 2024 -- Aug 2024}
+          \resumeItemListStart
+            \resumeItem{Entwicklung einer modularen Self-Service App für Kaffeemaschinen mit White-Label-Funktionalitäten und Material 3 Design}
+            \resumeItem{Bereitstellung einer plattformübergreifenden Lösung mit Flutter und Dart}
+            \resumeItem{Evaluierung von Anwendungsfällen zur Verbesserung der App-Benutzerfreundlichkeit}
+          \resumeItemListEnd
+      
+      \resumeProjectHeading
+          {\textbf{Lademanagement Backend-Entwicklung} $|$ \emph{Java, JSF, Docker, MySQL}}{Okt 2022 -- Feb 2023}
+          \resumeItemListStart
+            \resumeItem{Erstellung und Konfiguration von Docker-Images und Docker Compose für Tomcat mit JSF und Quarkus}
+            \resumeItem{Entwicklung eines robusten Backends zur Verbindung mit einer MySQL-Datenbank für E-Fahrzeug-Ladesysteme}
+            \resumeItem{Implementierung eines kollaborativen GitLab-basierten Workflows zur Verbesserung der Teamproduktivität}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Embedded Systems Firmware-Entwicklung} $|$ \emph{C++, STM32}}{Mär 2023 -- Aug 2023}
+          \resumeItemListStart
+            \resumeItem{Programmierung von Firmware für einen Embedded-Chip mit STM32CubeIDE zur Peripherie-Kommunikation}
+            \resumeItem{Entwicklung synchronisierter, race-condition-freier Kommunikationsprozesse mittels Multithreading}
+            \resumeItem{Konfiguration und Implementierung der I2C-Kommunikation mit einem Beschleunigungssensor}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Online Secondhand-Markt UI/UX Design} $|$ \emph{Figma, UX Design}}{Okt 2022 -- Feb 2023}
+          \resumeItemListStart
+            \resumeItem{Durchführung eines vollständigen Designprozesses für eine Online-Secondhand-Plattform}
+            \resumeItem{Erstellung von Wireframes und Entwicklung von High-Fidelity-Prototypen mit Figma}
+            \resumeItem{Durchführung von Benutzertest-Interviews und Integration von Feedback zur Verbesserung der Plattform}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------FÄHIGKEITEN-----------
+\section{Fähigkeiten}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programmiersprachen \& Tools}{: Python, JavaScript (Next.js, Node.js), Postgres, Flutter, C++, Terraform} \\
+     \textbf{Entwicklungspraktiken}{: Authentifizierung (OAuth, Magic Link), Infrastructure as Code, Embedded Systems} \\
+     \textbf{Soft Skills}{: Teamarbeit, Präsentationsfähigkeiten und Problemlösung}
+    }}
+ \end{itemize}
+
+%-----------AUSBILDUNG-----------
+\section{Ausbildung}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Hochschule Osnabrück}{2020 -- Aug 2024}
+      {Bachelor of Engineering, Informatik}{Deutschland}
+      \resumeItemListStart
+        \resumeItem{Engagement als Mentor vom 3. bis 6. Semester zur Unterstützung von Erstsemester-Studierenden}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\end{document} 
