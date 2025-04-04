@@ -20,20 +20,24 @@ jobs:
       - name: Build PDF with Nix
         run: nix build
 
-      - name: Upload PDF artifact
+      - name: Upload PDF artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: CV
-          path: result/Zisenis_CV.pdf
+          name: CVs
+          path: |
+            result/Zisenis_CV.pdf
+            result/Zisenis_CV_de.pdf
           
       - name: Upload to release
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: softprops/action-gh-release@v1
         with:
-          files: result/Zisenis_CV.pdf
+          files: |
+            result/Zisenis_CV.pdf
+            result/Zisenis_CV_de.pdf
           tag_name: latest
           name: Latest CV
-          body: Automatically generated CV
+          body: Automatically generated CV (English and German versions)
           draft: false
           prerelease: false
         env:
