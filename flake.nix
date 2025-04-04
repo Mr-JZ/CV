@@ -20,22 +20,18 @@
           document = pkgs.stdenvNoCC.mkDerivation rec {
             name = "latex-document";
             src = self;
-            buildInputs = [ pkgs.coreutils pkgs.latex2html tex ];
+            buildInputs = [ pkgs.coreutils tex ];
             phases = [ "unpackPhase" "buildPhase" "installPhase" ];
             buildPhase = ''
               export PATH="${pkgs.lib.makeBinPath buildInputs}";
               mkdir -p .cache/texmf-var
               env TEXMFHOME=.cache TEXMFVAR=.cache/texmf-var \
                 SOURCE_DATE_EPOCH=$(date +%s) \
-                OSFONTDIR=${pkgs.commit-mono}/share/fonts \
-                latexmk -interaction=nonstopmode -pdf -lualatex \
-                ${documentName}.tex; \
-                latex2html -noinfo ${documentName}.tex
+                latexmk -interaction=nonstopmode -pdf ${documentName}.tex -f
             '';
             installPhase = ''
               mkdir -p $out
               cp ${documentName}.pdf $out/
-              cp -r ${documentName} $out/
             '';
           };
         };
