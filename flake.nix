@@ -10,10 +10,14 @@
         let
           pkgs = nixpkgs.legacyPackages.${system};
           tex = pkgs.texlive.combine {
-            inherit (pkgs.texlive) scheme-minimal latex-bin latexmk;
+            inherit (pkgs.texlive) 
+              scheme-full
+              latex-bin
+              latexmk;
           };
         in
         rec {
+          documentName = "Zisenis_CV";
           packages = {
             document = pkgs.stdenvNoCC.mkDerivation rec {
               name = "latex-document";
@@ -27,17 +31,17 @@
                   SOURCE_DATE_EPOCH=$(date +%s) \
                   OSFONTDIR=${pkgs.commit-mono}/share/fonts \
                   latexmk -interaction=nonstopmode -pdf -lualatex \
-                  document.tex; \
-                  latex2html -noinfo document.tex
+                  ${documentName}.tex; \
+                  latex2html -noinfo ${documentName}.tex
               '';
               installPhase = ''
                 mkdir -p $out
-                cp document.pdf $out/
-                cp -r document $out/
+                cp ${documentName}.pdf $out/
+                cp -r ${documentName} $out/
               '';
             };
           };
           packages.default = packages.document;
           devShell = with pkgs; mkShell { packages = [ packages.document.buildInputs ]; shellHook = ''echo -n Hello LaTeX''; };
-        });
+    });
 }
