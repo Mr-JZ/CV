@@ -23,11 +23,18 @@
             buildInputs = [ pkgs.coreutils tex ];
             phases = [ "unpackPhase" "buildPhase" "installPhase" ];
             buildPhase = ''
-              export PATH="${pkgs.lib.makeBinPath buildInputs}";
-              mkdir -p .cache/texmf-var
-              env TEXMFHOME=.cache TEXMFVAR=.cache/texmf-var \
-                SOURCE_DATE_EPOCH=$(date +%s) \
-                latexmk -interaction=nonstopmode -pdf ${documentName}.tex -f
+              # Copy common file first
+              cp ${src}/cv_common.tex .
+              
+              # Build English version
+              cp ${src}/Zisenis_CV.tex .
+              pdflatex Zisenis_CV.tex
+              pdflatex Zisenis_CV.tex
+              
+              # Build German version
+              cp ${src}/Zisenis_CV_de.tex .
+              pdflatex Zisenis_CV_de.tex
+              pdflatex Zisenis_CV_de.tex
             '';
             installPhase = ''
               mkdir -p $out
